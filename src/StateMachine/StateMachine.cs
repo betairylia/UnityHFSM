@@ -258,6 +258,14 @@ namespace UnityHFSM
 		}
 
 		/// <summary>
+		/// Clears the pending transition so it will be ignored when the state can exit.
+		/// </summary>
+		public void ClearPendingTransitions()
+		{
+			pendingTransition = default;
+		}
+
+		/// <summary>
 		/// Requests a "vertical transition", allowing the state machine to exit
 		/// to allow the parent fsm to transition to the next state. It respects the
 		/// needsExitTime property of the active state.
