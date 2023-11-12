@@ -16,6 +16,8 @@ namespace UnityHFSM
 		/// </summary>
 		void StateCanExit();
 
+		void ClearPendingTransitions();
+
 		bool HasPendingTransition { get; }
 
 		IStateMachine ParentFsm { get; }
